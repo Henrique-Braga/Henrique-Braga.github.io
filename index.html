@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnePage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0067b1, #6dbd45);
+      color: #003b5c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      max-width: 600px;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    header ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    header ul li {
+      margin: 0.3rem 0;
+    }
+
+    .circle-layout {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 2rem 0;
+    }
+
+    .circle-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  border: 4px solid #ffffffcc;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+    .card {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #003b5c;
+      border-radius: 50%;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      z-index: 1;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: #0079c1;
+    }
+
+    .card p {
+      font-size: 0.75rem;
+    }
+
+    /* POSIÇÕES AJUSTADAS */
+    .visao {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .missao {
+      top: 50%;
+      left: 50%;
+      transform: translate(90px, -50%);
+    }
+
+    .objetivo {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 90px);
+    }
+
+    .valores {
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    .proposito {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 650px) {
+      .circle-layout {
+        transform: scale(0.85);
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>OnePage:</h1>
+    <ul>
+      <li>📌 Nome: Henrique Braga Alves Pereira</li>
+      <li>🏡 Cidade: Uberlândia - MG</li>
+      <li>🎓 Curso: Ciência da Computação - UFU</li>
+      <li>📅 Conclusão: Dezembro de 2026</li>
+    </ul>
+  </header>
+
+  <section class="circle-layout">
+    <!-- Círculo externo que tangencia perfeitamente os menores -->
+    <div class="circle-background"></div>
+
+    <div class="card visao">
+      <h2>VISÃO</h2>
+      <p>Mediador, Flexível</p>
+      <p>Ex = Desafios de trabalhos em grupo</p>
+    </div>
+    <div class="card missao">
+      <h2>MISSÃO</h2>
+      <p> Universidade</p>
+      <p> Foco, Determinação</p>
+      <p> Melhor versão</p>
+    </div>
+    <div class="card objetivo">
+      <h2>OBJETIVOS</h2>
+      <p>Resolver o problema</p>
+      <p>Ferramenta</p>
+    </div>
+    <div class="card valores">
+      <h2>VALORES</h2>
+      <p>Integridade, Caráter</p>
+      <p>Paciência</p>
+    </div>
+    <div class="card proposito">
+      <h2>PROPÓSITO</h2>
+      <p>Crescimento Pessoal</p>
+      <p>Monitoria</p>
+    </div>
+  </section>
+
+</body>
+</html>
